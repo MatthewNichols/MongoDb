@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MongoDb.Entities;
 using MongoDb.ViewModels;
 using Json = System.String;
@@ -21,7 +22,7 @@ namespace MongoDb
         Json GetDay(DateTime date);
         
         // Every person can apply to position.
-        void ApplyToPosition(DateTime date, PositionViewModel position, PersonViewModel person);
+        void ApplyToPositions(DateTime date, IEnumerable<PositionViewModel> positionList, PersonViewModel person);
 
         /****************** Admin Access ***********************/
 

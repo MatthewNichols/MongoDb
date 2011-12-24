@@ -39,7 +39,7 @@ namespace MongoDb
             return day != null ? Json(day) : GenerateDefaultDay(date);
         }
 
-        public void ApplyToPosition(DateTime date, PositionViewModel position, PersonViewModel person)
+        public void ApplyToPosition(DateTime date, IEnumerable<PositionViewModel> position, PersonViewModel person)
         {
             throw new NotImplementedException();
         }
